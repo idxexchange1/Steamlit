@@ -31,5 +31,5 @@ if st.button("Predict Price"):
     prediction = model.predict(input_df)[0]
     st.success(f"Estimated Home Price: ${prediction:,.0f}")
 
-!pip install streamlit pyngrok
+
 
