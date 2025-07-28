@@ -592,4 +592,5 @@ zipp==3.23.0
 zstandard==0.23.0torchaudio==2.1.0
 streamlit
 spacy==3.5.4
-gdal
+--find-links https://download.lfd.uci.edu/pythonlibs/w4tscw6k/
+gdal==3.4.1
