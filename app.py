@@ -15,7 +15,7 @@ import joblib
 # Load the trained Gradient Boosting model
 model = joblib.load("model.pkl")
 
-st.title("🏡 Home Price Predictor (Gradient Boosting)")
+st.title("🏡 California House Price Predictor")
 
 # User inputs
 sqft = st.number_input("Living Area (sqft)", 500, 10000, step=50)
