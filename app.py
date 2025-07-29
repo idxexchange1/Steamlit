@@ -25,8 +25,8 @@ if st.button("Predict Price"):
         "LivingArea": [sqft],
         "BedroomsTotal": [beds],
         "BathroomsTotalInteger": [baths],
-        "ZipCodeGroup": [zip_code],
-        "BuildingAge": [2025 - year_built]
+        "PostalCode": [zip_code],
+        "YearBuilt": [2025 - year_built]
     })
 
     input_df = input_df.astype(float)
