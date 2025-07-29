@@ -28,6 +28,8 @@ if st.button("Predict Price"):
         "ZipCodeGroup": [zip_code],
         "BuildingAge": [2025 - year_built]
     })
+
+    input_df = input_df.astype(float)
     prediction = model.predict(input_df)[0]
     st.success(f"Estimated Home Price: ${prediction:,.0f}")
 
