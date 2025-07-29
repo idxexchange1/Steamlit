@@ -37,7 +37,7 @@ view = st.selectbox("Has View", ["No", "Yes"])
 new_construction = st.selectbox("New Construction", ["No", "Yes"])
 
 # Location Cluster (1-19)
-#location_cluster = st.selectbox("Location Cluster", list(range(1, 20)))
+location_cluster = st.selectbox("Location Cluster", list(range(1, 20)))
 
 # Prediction button
 if st.button("Predict Price"):
@@ -74,9 +74,9 @@ if st.button("Predict Price"):
         input_dict['ViewYN_1'] = 1
 
     # Handle location cluster dummies (LocationCluster_2.0 to LocationCluster_19.0)
-    #for i in range(2, 20):
-        #col = f'LocationCluster_{float(i)}'
-        #input_dict[col] = 1 if location_cluster == i else 0
+    for i in range(2, 20):
+        col = f'LocationCluster_{float(i)}'
+        input_dict[col] = 1 if location_cluster == i else 0
 
     # Convert to DataFrame
     input_df = pd.DataFrame([input_dict])
