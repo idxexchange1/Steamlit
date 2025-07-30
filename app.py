@@ -26,8 +26,8 @@ lot_size = st.number_input("Lot Size (sqft)", 1000, 20000, step=100)
 year_built = st.number_input("Year Built", 1900, 2025)
 stories = st.selectbox("Stories", [1, 2, 3])
 parking_total = st.number_input("Total Parking Spaces", 0, 10)
-#latitude = st.number_input("Latitude", min_value=32.56, max_value=36.06, value=34.3, step=0.0001)
-#longitude = st.number_input("Longitude", min_value=-119.52, max_value=-115.93, value=-117.7, step=0.0001)
+latitude = st.number_input("Latitude", min_value=32.56, max_value=36.06, value=34.3, step=0.0001)
+longitude = st.number_input("Longitude", min_value=-119.52, max_value=-115.93, value=-117.7, step=0.0001)
 
 # Binary inputs
 attached_garage = st.selectbox("Attached Garage", ["No", "Yes"])
@@ -50,8 +50,8 @@ if st.button("Predict Price"):
         'YearBuilt': year_built,
         'Stories': stories,
         'ParkingTotal': parking_total,
-        #'Latitude': latitude,
-        #'Longitude': longitude
+        'Latitude': latitude,
+        'Longitude': longitude
     }
 
     # Add dummies (only the '1' versions due to drop_first=True)
