@@ -26,7 +26,7 @@ lot_size = st.number_input("Lot Size (sqft)", 1000, 20000, step=100)
 year_built = st.number_input("Year Built", 1900, 2025)
 stories = st.selectbox("Stories", [1, 2, 3])
 parking_total = st.number_input("Total Parking Spaces", 0, 10)
-latitude = st.number_input("Latitude", min_value=0, max_value=41.97, step=0.0001)
+latitude = st.number_input("Latitude", min_value=0.00, max_value=41.97, step=0.0001)
 longitude = st.number_input("Longitude", min_value=-124.19, max_value=329.00, step=0.0001)
 
 # Binary inputs
